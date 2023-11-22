@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jhooq-springboot
+  name: devops-springboot
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: jhooq-springboot
+      app: devops-springboot
   template:
     metadata:
       labels:
-        app: jhooq-springboot
+        app: devops-springboot
     spec:
       containers:
         - name: springboot
-          image: Malleswari9/jhooq-docker-demo:jhooq-docker-demo
+          image: Malleswari9/devops-docker-demo:jhooq-docker-demo
           ports:
             - containerPort: 8080
           env:
